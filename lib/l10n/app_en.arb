@@ -1,0 +1,205 @@
+{
+  "@@locale": "en",
+  "appTitle": "HoWeather",
+  "@appTitle": {
+    "description": "Application name"
+  },
+  "hourly": "Hourly forecast",
+  "forecastDays": "{count, plural, =1{1-day forecast} other{{count}-day forecast}}",
+  "@forecastDays": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "airQuality": "Air quality",
+  "uvIndex": "UV index",
+  "wind": "Wind",
+  "humidity": "Humidity",
+  "pressure": "Pressure",
+  "visibility": "Visibility",
+  "sunriseSunset": "Sunrise & sunset",
+  "sunrise": "Sunrise",
+  "sunset": "Sunset",
+  "dailyBrief": "Daily brief",
+  "feelsLike": "Feels like {temp}",
+  "@feelsLike": {
+    "placeholders": {
+      "temp": {
+        "type": "String"
+      }
+    }
+  },
+  "high": "H {temp}",
+  "@high": {
+    "placeholders": {
+      "temp": {
+        "type": "String"
+      }
+    }
+  },
+  "low": "L {temp}",
+  "@low": {
+    "placeholders": {
+      "temp": {
+        "type": "String"
+      }
+    }
+  },
+  "aqiGood": "Good",
+  "aqiModerate": "Moderate",
+  "aqiUnhealthySensitive": "Unhealthy for sensitive groups",
+  "aqiUnhealthy": "Unhealthy",
+  "aqiVeryUnhealthy": "Very unhealthy",
+  "aqiHazardous": "Hazardous",
+  "noData": "No data",
+  "today": "Today",
+  "now": "Now",
+  "dewPoint": "Dew point {temp}",
+  "@dewPoint": {
+    "placeholders": {
+      "temp": {
+        "type": "String"
+      }
+    }
+  },
+  "gusts": "Gusts {value}",
+  "@gusts": {
+    "placeholders": {
+      "value": {
+        "type": "String"
+      }
+    }
+  },
+  "lifeDress": "Dress",
+  "lifeCarWash": "Car wash",
+  "lifeSport": "Sport",
+  "lifeUmbrella": "Umbrella",
+  "lifeSunCream": "Sun cream",
+  "lifeAllergy": "Allergy",
+  "dressWarm": "Warm clothes",
+  "dressLight": "Light layers",
+  "dressCool": "Cool clothes",
+  "carWashGood": "Good",
+  "carWashPoor": "Not ideal",
+  "sportIdeal": "Ideal",
+  "sportPoor": "Poor",
+  "umbrellaYes": "Take one",
+  "umbrellaNo": "Not needed",
+  "uvLow": "Low",
+  "uvModerate": "Moderate",
+  "uvHigh": "High",
+  "allergyLow": "Low",
+  "allergyModerate": "Moderate",
+  "allergyHigh": "High",
+  "unitKmh": "km/h",
+  "unitMph": "mph",
+  "unitMs": "m/s",
+  "unitMb": "mb",
+  "unitKm": "km",
+  "unitPercent": "%",
+  "dirN": "N",
+  "dirNNE": "NNE",
+  "dirNE": "NE",
+  "dirENE": "ENE",
+  "dirE": "E",
+  "dirESE": "ESE",
+  "dirSE": "SE",
+  "dirSSE": "SSE",
+  "dirS": "S",
+  "dirSSW": "SSW",
+  "dirSW": "SW",
+  "dirWSW": "WSW",
+  "dirW": "W",
+  "dirWNW": "WNW",
+  "dirNW": "NW",
+  "dirNNW": "NNW",
+  "updatedAt": "Updated {time}",
+  "@updatedAt": {
+    "placeholders": {
+      "time": {
+        "type": "String"
+      }
+    }
+  },
+  "staleLabel": "Showing saved data",
+  "dataSource": "WeatherAPI.com",
+  "retry": "Retry",
+  "errorOffline": "You're offline",
+  "errorGeneric": "Couldn't load the weather",
+  "errorKey": "API key is invalid",
+  "errorQuota": "Monthly API quota exceeded",
+  "errorNotFound": "Location not found",
+  "searchCity": "Search a city",
+  "useMyLocation": "Use my location",
+  "noCitiesTitle": "No cities yet",
+  "myLocation": "My location",
+  "cities": "Cities",
+  "addCity": "Add city",
+  "searchHint": "Search for a city",
+  "noResults": "No cities found",
+  "cityLimitReached": "You can save up to 10 cities",
+  "delete": "Delete",
+  "settings": "Settings",
+  "temperatureUnit": "Temperature unit",
+  "windUnit": "Wind speed unit",
+  "autoUpdate": "Auto update",
+  "manual": "Manual",
+  "everyHours": "Every {n} h",
+  "@everyHours": {"placeholders": {"n": {"type": "int"}}},
+  "theme": "Theme",
+  "themeSystem": "System",
+  "themeLight": "Light",
+  "themeDark": "Dark",
+  "about": "About",
+  "dataAttribution": "Weather data by WeatherAPI.com",
+  "unitCelsius": "°C",
+  "unitFahrenheit": "°F",
+  "version": "Version",
+  "locationDenied": "Location access is off. Allow it in Settings.",
+  "openSettings": "Open Settings",
+  "humidityDry": "Dry",
+  "humidityComfortable": "Normal",
+  "humidityHumid": "Humid",
+  "pressureLow": "Low",
+  "pressureNormal": "Normal",
+  "pressureHigh": "High",
+  "pressureInfo": "{value} inHg",
+  "@pressureInfo": {"placeholders": {"value": {"type": "String"}}},
+  "visPoor": "Poor",
+  "visFair": "Fair",
+  "visGood": "Good",
+  "visExcellent": "Excellent",
+  "visInfo": "{value} mi",
+  "@visInfo": {"placeholders": {"value": {"type": "String"}}},
+  "uvPeak": "Today's peak {value}",
+  "@uvPeak": {"placeholders": {"value": {"type": "String"}}},
+  "daylight": "Daylight {duration}",
+  "@daylight": {"placeholders": {"duration": {"type": "String"}}},
+  "durationHm": "{h}h {m}m",
+  "@durationHm": {"placeholders": {"h": {"type": "int"}, "m": {"type": "int"}}},
+  "moonNew": "New moon",
+  "moonWaxingCrescent": "Waxing crescent",
+  "moonFirstQuarter": "First quarter",
+  "moonWaxingGibbous": "Waxing gibbous",
+  "moonFull": "Full moon",
+  "moonWaningGibbous": "Waning gibbous",
+  "moonLastQuarter": "Last quarter",
+  "moonWaningCrescent": "Waning crescent",
+  "weatherAlert": "Weather alert",
+  "alertsMore": "+{n} more",
+  "@alertsMore": {"placeholders": {"n": {"type": "int"}}},
+  "language": "Language",
+  "languageSystem": "System",
+  "languageHint": "Weather descriptions and official alerts are shown in this language.",
+  "units": "Units",
+  "translating": "Translating…",
+  "alertOriginalText": "Original text",
+  "translationUnavailable": "Couldn't translate it. Tap to read the original.",
+  "translatedAutomatically": "Translated automatically",
+  "hoursShort": "{n} h",
+  "@hoursShort": {"placeholders": {"n": {"type": "int"}}},
+  "refreshManualHint": "Updates only when you pull to refresh.",
+  "listSeparator": ", "
+}
