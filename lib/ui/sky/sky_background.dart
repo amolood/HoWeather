@@ -109,7 +109,11 @@ class _SkyBackgroundState extends State<SkyBackground>
       ),
       child: RepaintBoundary(
         child: CustomPaint(
-          painter: _SkyPainter(widget.scene, _c),
+          painter: _SkyPainter(
+            widget.scene,
+            _c,
+            rtl: Directionality.maybeOf(context) == TextDirection.rtl,
+          ),
           child: const SizedBox.expand(),
         ),
       ),
@@ -162,10 +166,17 @@ double snowSway(Offset seed, double v) =>
 enum _Precip { none, rain, snow }
 
 class _SkyPainter extends CustomPainter {
-  _SkyPainter(this.scene, this.t) : super(repaint: t);
+  _SkyPainter(this.scene, this.t, {this.rtl = false}) : super(repaint: t);
 
   final SkyScene scene;
   final Animation<double> t;
+
+  /// The sun and moon sit on the trailing side, away from the temperature,
+  /// so they move to the left in right-to-left layouts.
+  final bool rtl;
+
+  double _trailingX(Size size, double fraction) =>
+      size.width * (rtl ? 1 - fraction : fraction);
 
   Size? _moonSize;
   Path? _moonPath;
@@ -211,7 +222,7 @@ class _SkyPainter extends CustomPainter {
   }
 
   void _sun(Canvas canvas, Size size, double v) {
-    final c = Offset(size.width * 0.78, size.height * 0.16);
+    final c = Offset(_trailingX(size, 0.78), size.height * 0.16);
     final r = math.min(size.width, size.height) * 0.14;
     final pulse = 1 + 0.06 * math.sin(v * 2 * math.pi * 4);
     canvas.drawCircle(
@@ -238,7 +249,7 @@ class _SkyPainter extends CustomPainter {
   }
 
   void _moon(Canvas canvas, Size size, double v) {
-    final c = Offset(size.width * 0.76, size.height * 0.15);
+    final c = Offset(_trailingX(size, 0.76), size.height * 0.15);
     final r = math.min(size.width, size.height) * 0.09;
     // Stars twinkle gently.
     final star = Paint()..color = Colors.white;
@@ -351,5 +362,5 @@ class _SkyPainter extends CustomPainter {
   }
 
   @override
-  bool shouldRepaint(_SkyPainter old) => old.scene != scene || old.t != t;
+  bool shouldRepaint(_SkyPainter old) => old.scene != scene || old.t != t || old.rtl != rtl;
 }
